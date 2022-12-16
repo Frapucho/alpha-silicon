@@ -10,7 +10,7 @@ app.use(morgan('tiny'));
 morgan(':method :url :status :res[content-length] - :response-time ms');
   
 
-
+//persona
 app.get("/", function (req, res) {
     res.send("ALPHA-SILICON");
 });
@@ -18,10 +18,10 @@ app.get("/", function (req, res) {
 const personaCont = require("./src/controller/personaController.js");
 app.use("/api/persona",personaCont);
 
-/*
+//usuario
 const userCont = require("userController.js");
 app.use("/api/usuario",userCont);
-*/
+
 
 app.listen(config.server.port, function (err) {
     if (err) {
